@@ -21,8 +21,6 @@ jobs:
           dest: '"${HOME}/racketdist-${{ matrix.racket-version }}-${{ matrix.racket-variant }}"'
           local_catalogs: $GITHUB_WORKSPACE
           sudo: never
-      - name: Add Racket to PATH
-        run: echo "${HOME}/racketdist-${{ matrix.racket-version }}-${{ matrix.racket-variant }}/bin" >> $GITHUB_PATH
       - name: Check Racket version
         run: racket -v
       - name: Register local packages
