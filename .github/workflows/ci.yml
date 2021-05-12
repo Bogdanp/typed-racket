@@ -27,7 +27,7 @@ jobs:
         run: racket -v
       - name: Register local packages
         run: |
-          raco pkg install --auto --no-setup --skip-installed typed-racket-test
+          raco pkg install -i --auto --no-setup --skip-installed typed-racket-test
           raco pkg update --auto --no-setup source-syntax typed-racket-lib typed-racket-more typed-racket-compatibility typed-racket-doc typed-racket typed-racket-test
           raco pkg show -l --rx typed
       - run: raco setup --check-pkg-deps typed typed-racket typed-racket-test typed-scheme
